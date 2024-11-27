@@ -14,7 +14,7 @@ class Var(object):
     BOT_TOKEN = str(getenv('BOT_TOKEN'))
     name = str(getenv('SESSION_NAME', 'filetolinkbot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
-    WORKERS = int(getenv('WORKERS', '4'))
+    WORKERS = int(getenv('WORKERS', '7'))
     BIN_CHANNEL = int(getenv('BIN_CHANNEL'))
     PORT = int(getenv('PORT', 8080))
     BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
@@ -36,5 +36,5 @@ class Var(object):
     else:
         URL = "https://ill-kissie-movieloverzzbot-c2d02d02.koyeb.app/".format(FQDN)
     DATABASE_URL = str(getenv('DATABASE_URL'))
-    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', None))
+    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', '-1002230197603'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
